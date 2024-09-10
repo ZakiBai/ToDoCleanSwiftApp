@@ -7,13 +7,31 @@
 
 import UIKit
 
-class TodoListViewController: UIViewController {
-
+final class TodoListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        setupUI()
     }
-
-
 }
 
+// MARK: - Actions
+private extension TodoListViewController {
+    @objc func addTapped() {
+        print("add button tapped")
+    }
+}
+
+// MARK: - UI Setup
+
+private extension TodoListViewController {
+    func setupUI() {
+        title = "ToDoList"
+        self.tableView.register(UITableViewCell.self, forHeaderFooterViewReuseIdentifier: "cell")
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(addTapped)
+        )
+    }
+}
