@@ -48,7 +48,7 @@ final class TodoListViewController: UITableViewController {
 // MARK: - Actions
 private extension TodoListViewController {
     @objc func addTapped() {
-        print("add button tapped")
+        interactor?.createTask()
     }
 }
 
@@ -73,6 +73,10 @@ extension TodoListViewController {
         configureCell(cell, with: task)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        interactor?.didTaskSelected(request: TodoListModel.Request.TaskSelected(indexPath: indexPath))
+    }
 }
 
 // MARK: - UI Setup
@@ -80,7 +84,8 @@ extension TodoListViewController {
 private extension TodoListViewController {
     func setupUI() {
         title = "ToDoList"
-        self.tableView.register(UITableViewCell.self, forHeaderFooterViewReuseIdentifier: "cell")
+        navigationItem.setHidesBackButton(true, animated: true)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
@@ -113,10 +118,13 @@ private extension TodoListViewController {
             contentConfiguration.secondaryText = importantTask.deadline
             cell.accessoryType = importantTask.completed ? .checkmark : .none
         }
+        
+        cell.contentConfiguration = contentConfiguration
     }
 }
 
 // MARK: - ITodoListViewController
+
 extension TodoListViewController: ITodoListViewController {
     func render(viewModel: TodoListModel.ViewModel) {
         self.viewModel = viewModel

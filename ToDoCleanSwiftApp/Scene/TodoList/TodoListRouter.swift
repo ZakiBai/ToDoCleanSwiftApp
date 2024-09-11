@@ -14,7 +14,6 @@ protocol ITodoListRouter: AnyObject {
 
 final class TodoListRouter: ITodoListRouter {
     
-    
     // MARK: - Dependencies
     
     private let taskManager: ITaskManager
@@ -27,11 +26,10 @@ final class TodoListRouter: ITodoListRouter {
         self.navigationController = navigationController
     }
     
-    
     // MARK: - Public methods
     
     func routeToCreateTask() {
-        let viewController = CreateTaskViewController()
+        let viewController = CreateTaskAssembler(taskManager: taskManager).assembly()
         navigationController.pushViewController(viewController, animated: true)
         viewController.router = self
     }

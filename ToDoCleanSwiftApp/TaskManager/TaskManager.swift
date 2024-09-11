@@ -8,7 +8,7 @@
 final class TaskManager: ITaskManager {
     private var taskList: [Task] = []
     
-    init(taskList: [Task]) {
+    init(taskList: [Task] = [Task]()) {
         self.taskList = taskList
     }
     
