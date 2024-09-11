@@ -51,7 +51,7 @@ final class ImportantTask: Task {
         }
     }
     
-    init(title: String, createDate: Date, taskPriority: TaskPriority) {
+    init(title: String, createDate: Date = Date(), taskPriority: TaskPriority) {
         self.createDate = createDate
         self.taskPriority = taskPriority
         super.init(title: title)

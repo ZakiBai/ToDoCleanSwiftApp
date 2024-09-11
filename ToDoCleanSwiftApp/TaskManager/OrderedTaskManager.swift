@@ -8,9 +8,9 @@
 import Foundation
 
 final class OrderedTaskManager: ITaskManager {
-    private let taskManager: TaskManager
+    private let taskManager: ITaskManager
     
-    init(taskManager: TaskManager) {
+    init(taskManager: ITaskManager) {
         self.taskManager = taskManager
     }
     
