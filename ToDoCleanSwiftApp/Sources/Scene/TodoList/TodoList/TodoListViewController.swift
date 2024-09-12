@@ -9,13 +9,11 @@ import UIKit
 
 protocol ITodoListViewController: AnyObject {
     func render(viewModel: TodoListModel.ViewModel)
-    func createTask()
 }
 
 final class TodoListViewController: UITableViewController {
     
     // MARK: - Dependencies
-    var router: ITodoListRouter?
     var interactor: ITodoListInteractor?
     
     // MARK: - Private protperties
@@ -129,9 +127,5 @@ extension TodoListViewController: ITodoListViewController {
     func render(viewModel: TodoListModel.ViewModel) {
         self.viewModel = viewModel
         tableView.reloadData()
-    }
-    
-    func createTask() {
-        router?.routeToCreateTask()
     }
 }

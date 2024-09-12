@@ -7,16 +7,12 @@
 
 import UIKit
 
-protocol ICreateTaskViewController: AnyObject {
-    func taskCreated()
-}
+protocol ICreateTaskViewController: AnyObject {}
 
-final class CreateTaskViewController: UIViewController {
+final class CreateTaskViewController: UIViewController, ICreateTaskViewController {
     // MARK: - Dependencies
-    
-    var router: ITodoListRouter?
+
     var interactor: ICreateTaskInteractor?
-    
     
     // MARK: - Private properties
     
@@ -184,8 +180,3 @@ private extension CreateTaskViewController {
     }
 }
 
-extension CreateTaskViewController: ICreateTaskViewController {
-    func taskCreated() {
-        router?.backTodoList()
-    }
-}

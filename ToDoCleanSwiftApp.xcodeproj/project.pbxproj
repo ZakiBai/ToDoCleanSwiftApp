@@ -22,7 +22,6 @@
 		353FA5B72C91B4A800354DC0 /* TodoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5B62C91B4A800354DC0 /* TodoListInteractor.swift */; };
 		353FA5B92C91B84000354DC0 /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5B82C91B84000354DC0 /* TodoListPresenter.swift */; };
 		353FA5BB2C91D5B200354DC0 /* TodoListAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5BA2C91D5B200354DC0 /* TodoListAssembler.swift */; };
-		353FA5BF2C91D8A800354DC0 /* TodoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5BE2C91D8A800354DC0 /* TodoListRouter.swift */; };
 		353FA5C32C91DA6100354DC0 /* CreateTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5C22C91DA6100354DC0 /* CreateTaskModel.swift */; };
 		353FA5C52C91DB2A00354DC0 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5C42C91DB2A00354DC0 /* CreateTaskViewController.swift */; };
 		353FA5C82C91DE4800354DC0 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5C72C91DE4800354DC0 /* Sizes.swift */; };
@@ -34,8 +33,12 @@
 		353FA5D52C91E56A00354DC0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5D42C91E56A00354DC0 /* LoginViewController.swift */; };
 		353FA5D72C91E7ED00354DC0 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5D62C91E7ED00354DC0 /* LoginInteractor.swift */; };
 		353FA5D92C91E91C00354DC0 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5D82C91E91C00354DC0 /* LoginPresenter.swift */; };
-		353FA5DB2C91EA6100354DC0 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5DA2C91EA6100354DC0 /* LoginRouter.swift */; };
 		353FA5DD2C91EB8500354DC0 /* LoginAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5DC2C91EB8500354DC0 /* LoginAssembler.swift */; };
+		353FA5E12C92FD9400354DC0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5E02C92FD9400354DC0 /* AppCoordinator.swift */; };
+		353FA5E42C92FDB700354DC0 /* ICoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5E32C92FDB700354DC0 /* ICoordinator.swift */; };
+		353FA5E62C92FEC400354DC0 /* ICoordinatorFinishDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5E52C92FEC400354DC0 /* ICoordinatorFinishDelegate.swift */; };
+		353FA5E82C9305CA00354DC0 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5E72C9305CA00354DC0 /* LoginCoordinator.swift */; };
+		353FA5EA2C93286A00354DC0 /* TodoListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353FA5E92C93286A00354DC0 /* TodoListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +59,6 @@
 		353FA5B62C91B4A800354DC0 /* TodoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractor.swift; sourceTree = "<group>"; };
 		353FA5B82C91B84000354DC0 /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
 		353FA5BA2C91D5B200354DC0 /* TodoListAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListAssembler.swift; sourceTree = "<group>"; };
-		353FA5BE2C91D8A800354DC0 /* TodoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRouter.swift; sourceTree = "<group>"; };
 		353FA5C22C91DA6100354DC0 /* CreateTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskModel.swift; sourceTree = "<group>"; };
 		353FA5C42C91DB2A00354DC0 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 		353FA5C72C91DE4800354DC0 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
@@ -68,8 +70,12 @@
 		353FA5D42C91E56A00354DC0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		353FA5D62C91E7ED00354DC0 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		353FA5D82C91E91C00354DC0 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		353FA5DA2C91EA6100354DC0 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		353FA5DC2C91EB8500354DC0 /* LoginAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembler.swift; sourceTree = "<group>"; };
+		353FA5E02C92FD9400354DC0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		353FA5E32C92FDB700354DC0 /* ICoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICoordinator.swift; sourceTree = "<group>"; };
+		353FA5E52C92FEC400354DC0 /* ICoordinatorFinishDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICoordinatorFinishDelegate.swift; sourceTree = "<group>"; };
+		353FA5E72C9305CA00354DC0 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		353FA5E92C93286A00354DC0 /* TodoListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,13 +108,8 @@
 		353FA58F2C9016F600354DC0 /* ToDoCleanSwiftApp */ = {
 			isa = PBXGroup;
 			children = (
-				353FA5B12C917F2B00354DC0 /* Entities */,
-				353FA5A62C9089FA00354DC0 /* TaskManager */,
-				353FA5A52C901C6800354DC0 /* Scene */,
-				353FA5C62C91DE2E00354DC0 /* Theme */,
+				353FA5DE2C92FCBB00354DC0 /* Sources */,
 				353FA5A42C9019F600354DC0 /* Resources */,
-				353FA5902C9016F600354DC0 /* AppDelegate.swift */,
-				353FA5922C9016F600354DC0 /* SceneDelegate.swift */,
 			);
 			path = ToDoCleanSwiftApp;
 			sourceTree = "<group>";
@@ -155,7 +156,6 @@
 		353FA5BD2C91D86400354DC0 /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
-				353FA5BE2C91D8A800354DC0 /* TodoListRouter.swift */,
 				353FA5C02C91DA1000354DC0 /* TodoList */,
 				353FA5C12C91DA2100354DC0 /* CreateTask */,
 			);
@@ -198,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				353FA5D02C91E30900354DC0 /* LoginModel.swift */,
-				353FA5DA2C91EA6100354DC0 /* LoginRouter.swift */,
 				353FA5DC2C91EB8500354DC0 /* LoginAssembler.swift */,
 				353FA5D22C91E42800354DC0 /* LoginWorker.swift */,
 				353FA5D42C91E56A00354DC0 /* LoginViewController.swift */,
@@ -206,6 +205,40 @@
 				353FA5D82C91E91C00354DC0 /* LoginPresenter.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		353FA5DE2C92FCBB00354DC0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				353FA5DF2C92FCD300354DC0 /* Coordinators */,
+				353FA5B12C917F2B00354DC0 /* Entities */,
+				353FA5A62C9089FA00354DC0 /* TaskManager */,
+				353FA5A52C901C6800354DC0 /* Scene */,
+				353FA5C62C91DE2E00354DC0 /* Theme */,
+				353FA5902C9016F600354DC0 /* AppDelegate.swift */,
+				353FA5922C9016F600354DC0 /* SceneDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		353FA5DF2C92FCD300354DC0 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				353FA5E22C92FDA700354DC0 /* Common */,
+				353FA5E02C92FD9400354DC0 /* AppCoordinator.swift */,
+				353FA5E72C9305CA00354DC0 /* LoginCoordinator.swift */,
+				353FA5E92C93286A00354DC0 /* TodoListCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		353FA5E22C92FDA700354DC0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				353FA5E32C92FDB700354DC0 /* ICoordinator.swift */,
+				353FA5E52C92FEC400354DC0 /* ICoordinatorFinishDelegate.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353FA5E62C92FEC400354DC0 /* ICoordinatorFinishDelegate.swift in Sources */,
 				353FA5B92C91B84000354DC0 /* TodoListPresenter.swift in Sources */,
 				353FA5D12C91E30900354DC0 /* LoginModel.swift in Sources */,
 				353FA5B52C91807A00354DC0 /* SectionForTaskMangerAdapter.swift in Sources */,
@@ -292,18 +326,20 @@
 				353FA5912C9016F600354DC0 /* AppDelegate.swift in Sources */,
 				353FA5CA2C91DEEC00354DC0 /* CreateTaskInteractor.swift in Sources */,
 				353FA5D32C91E42800354DC0 /* LoginWorker.swift in Sources */,
+				353FA5E82C9305CA00354DC0 /* LoginCoordinator.swift in Sources */,
 				353FA5DD2C91EB8500354DC0 /* LoginAssembler.swift in Sources */,
 				353FA5AA2C908ECE00354DC0 /* Tasks.swift in Sources */,
 				353FA5CC2C91E09D00354DC0 /* CreateTaskPresenter.swift in Sources */,
 				353FA5B72C91B4A800354DC0 /* TodoListInteractor.swift in Sources */,
 				353FA5CE2C91E11600354DC0 /* CreateTaskAssembler.swift in Sources */,
-				353FA5BF2C91D8A800354DC0 /* TodoListRouter.swift in Sources */,
+				353FA5E42C92FDB700354DC0 /* ICoordinator.swift in Sources */,
+				353FA5E12C92FD9400354DC0 /* AppCoordinator.swift in Sources */,
 				353FA5B32C917F4D00354DC0 /* TaskRepository.swift in Sources */,
+				353FA5EA2C93286A00354DC0 /* TodoListCoordinator.swift in Sources */,
 				353FA5C82C91DE4800354DC0 /* Sizes.swift in Sources */,
 				353FA5D72C91E7ED00354DC0 /* LoginInteractor.swift in Sources */,
 				353FA5932C9016F600354DC0 /* SceneDelegate.swift in Sources */,
 				353FA5AE2C90985400354DC0 /* OrderedTaskManager.swift in Sources */,
-				353FA5DB2C91EA6100354DC0 /* LoginRouter.swift in Sources */,
 				353FA5C52C91DB2A00354DC0 /* CreateTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

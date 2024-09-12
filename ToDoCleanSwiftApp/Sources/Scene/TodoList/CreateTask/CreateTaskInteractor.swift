@@ -17,12 +17,14 @@ final class CreateTaskInteractor: ICreateTaskInteractor {
     
     private var presenter: ICreateTaskPresenter
     private let taskManager: ITaskManager
+    private let createTaskClosure: () -> Void
     
     // MARK: - Initialization
     
-    init(presenter: ICreateTaskPresenter, taskManager: ITaskManager) {
+    init(presenter: ICreateTaskPresenter, taskManager: ITaskManager, createTaskClosure: @escaping () -> Void) {
         self.presenter = presenter
         self.taskManager = taskManager
+        self.createTaskClosure = createTaskClosure
     }
     
     // MARK: - Public methods
@@ -39,6 +41,6 @@ final class CreateTaskInteractor: ICreateTaskInteractor {
             )
             taskManager.addTask(task: task)
         }
-        presenter.taskCreated()
+        createTaskClosure()
     }
 }

@@ -7,9 +7,7 @@
 
 import Foundation
 
-protocol ICreateTaskPresenter {
-    func taskCreated()
-}
+protocol ICreateTaskPresenter {}
 
 final class CreateTaskPresenter: ICreateTaskPresenter {
     
@@ -21,10 +19,5 @@ final class CreateTaskPresenter: ICreateTaskPresenter {
     
     init(viewController: ICreateTaskViewController!) {
         self.viewController = viewController
-    }
-    
-    // MARK: - Public methods
-    func taskCreated() {
-        viewController.taskCreated()
     }
 }

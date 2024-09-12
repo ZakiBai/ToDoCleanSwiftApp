@@ -20,10 +20,10 @@ final class CreateTaskAssembler {
     
     // MARK: - Public methods
     
-    func assembly() -> CreateTaskViewController {
+    func assembly(createTaskClosure: @escaping () -> Void) -> CreateTaskViewController {
         let viewController = CreateTaskViewController()
         let presenter = CreateTaskPresenter(viewController: viewController)
-        let interactor = CreateTaskInteractor(presenter: presenter, taskManager: taskManager)
+        let interactor = CreateTaskInteractor(presenter: presenter, taskManager: taskManager, createTaskClosure: createTaskClosure)
         viewController.interactor = interactor
         return viewController
     }

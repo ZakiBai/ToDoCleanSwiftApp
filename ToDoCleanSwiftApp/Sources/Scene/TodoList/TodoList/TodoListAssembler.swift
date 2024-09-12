@@ -10,35 +10,22 @@ import UIKit
 final class TodoListAssembler {
     
     // MARK: - Dependencies
-    
-    private let repository: ITaskRepository
     private let taskManager: ITaskManager
-    
-    
+        
     // MARK: - Initialization
     
-    init(repository: ITaskRepository, taskManager: ITaskManager) {
-        self.repository = repository
+    init(taskManager: ITaskManager) {
         self.taskManager = taskManager
     }
     
     // MARK: - Public methods
     
-    func assembly() -> TodoListViewController {
+    func assembly(createTaskClosure: @escaping () -> Void) -> TodoListViewController {
         let viewController = TodoListViewController()
-        let taskManager = buildTaskManager()
         let sectionForTheManagerAdapter = SectionForTaskMangerAdapter(taskManager: taskManager)
         let presenter = TodoListPresenter(viewController: viewController)
-        let interactor = TodoListInteractor(presenter: presenter, sectionManager: sectionForTheManagerAdapter)
+        let interactor = TodoListInteractor(presenter: presenter, sectionManager: sectionForTheManagerAdapter, createTaskClosure: createTaskClosure)
         viewController.interactor = interactor
         return viewController
-    }
-    
-    // MARK: - Private methods
-    
-    private func buildTaskManager() -> ITaskManager {
-        let orderTaskManager = OrderedTaskManager(taskManager: taskManager)
-        orderTaskManager.addTasks(tasks: repository.getTasks())
-        return orderTaskManager
     }
 }

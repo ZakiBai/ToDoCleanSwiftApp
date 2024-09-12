@@ -19,12 +19,14 @@ final class TodoListInteractor: ITodoListInteractor {
     
     private var presenter: ITodoListPresenter
     private var sectionManager: ISectionForTaskManagerAdapter
+    private var createTaskClosure: () -> Void
     
     // MARK: - Initiazlization
     
-    init(presenter: ITodoListPresenter, sectionManager: ISectionForTaskManagerAdapter) {
+    init(presenter: ITodoListPresenter, sectionManager: ISectionForTaskManagerAdapter, createTaskClosure: @escaping () -> Void) {
         self.presenter = presenter
         self.sectionManager = sectionManager
+        self.createTaskClosure = createTaskClosure
     }
     
     // MARK: - Public methods
@@ -52,7 +54,7 @@ final class TodoListInteractor: ITodoListInteractor {
     }
     
     func createTask() {
-        presenter.createTask()
+        createTaskClosure()
     }
     
 }

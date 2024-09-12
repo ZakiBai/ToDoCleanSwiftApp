@@ -14,7 +14,6 @@ protocol ILoginViewController: AnyObject {
 final class LoginViewController: UIViewController, ILoginViewController {
     
     // MARK: - Dependencies
-    var router: ILoginRouter?
     var interactor: ILoginInteractor?
     
     // MARK: - Private properties
@@ -49,12 +48,6 @@ final class LoginViewController: UIViewController, ILoginViewController {
     // MARK: - Public methods
     
     func render(viewModel: LoginModel.ViewModel) {
-        switch viewModel {
-        case .success:
-            router?.routeToNext()
-        case .failure(let message):
-            router?.showError(message: message)
-        }
     }
 }
 

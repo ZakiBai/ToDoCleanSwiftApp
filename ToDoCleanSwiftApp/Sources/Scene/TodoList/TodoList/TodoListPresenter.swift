@@ -9,7 +9,6 @@ import Foundation
 
 protocol ITodoListPresenter {
     func present(response: TodoListModel.Response)
-    func createTask()
 }
 
 final class TodoListPresenter: ITodoListPresenter {
@@ -35,10 +34,6 @@ final class TodoListPresenter: ITodoListPresenter {
             sections.append(sectionData)
         }
         viewController.render(viewModel: TodoListModel.ViewModel(tasksBySections: sections))
-    }
-    
-    func createTask() {
-        viewController.createTask()
     }
 }
 
